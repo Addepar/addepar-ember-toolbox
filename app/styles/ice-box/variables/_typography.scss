@@ -1,0 +1,77 @@
+//
+// Typography Variables
+// -----------------------------------------------------------------------------
+// TBD, add documentation.
+// Also none of this has actually been refactored yet.
+
+// Font Family
+// -------------------------
+$univers-font-folder:               '/ice-box/fonts';
+$gotham-font-folder:                '/ice-box/fonts';
+$gotham-narrow-font-folder:         '/ice-box/fonts';
+$whitney-font-folder:               '/ice-box/fonts';
+$whitney-numeric-font-folder:       '/ice-box/fonts';
+$tiempos-headline-font-folder:      '/ice-box/fonts';
+$tiempos-text-font-folder:          '/ice-box/fonts';
+
+$univers:                           'Univers-Next';
+$univers-condensed:                 'Univers-Next-Condensed';
+$univers-tabular:                   'Univers-Tabular';
+$tiempos:                           'Tiempos Text';
+$tiempos-headline:                  'Tiempos Headline';
+$backup-fonts:                      'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+
+$font-family-sans-serif:  $univers, $backup-fonts;
+$font-family-serif:       Georgia, 'Times New Roman', Times, serif;
+$font-family-monospace:   Menlo, Monaco, Consolas, 'Courier New', monospace;
+$font-family-condensed:   $univers-condensed, $font-family-sans-serif;
+$font-family-tabular:     $univers-tabular, $font-family-sans-serif;
+$font-family-base:        $font-family-sans-serif;
+
+
+// Font Weights
+// -------------------------
+$font-thin:                      100;
+$font-extra-light:               200;
+$font-light:                     300;
+$font-normal:                    400;
+$font-medium:                    500;
+$font-semi-bold:                 600;
+$font-bold:                      700;
+$font-extra-bold:                800;
+$font-heavy:                     900;
+
+
+// Font Size
+// -------------------------
+$font-size-base:                 13px;
+$font-size-xsmall:               10px;
+$font-size-smallest:             8px;
+$font-size-smaller:              11px;
+$font-size-small:                ceil(($font-size-base * 0.85)); // ~12px
+$font-size-medium:               14px;
+$font-size-large:                ceil(($font-size-base * 1.25)); // ~18px
+$font-size-xl:                   ceil(($font-size-base * 1.7)); // ~24px
+
+$font-size-h1:                   floor(($font-size-base * 2.6)); // ~36px
+$font-size-h2:                   floor(($font-size-base * 2.15)); // ~30px
+$font-size-h3:                   ceil(($font-size-base * 1.7)); // ~24px
+$font-size-h4:                   ceil(($font-size-base * 1.25)); // ~18px
+$font-size-h5:                   $font-size-base;
+$font-size-h6:                   ceil(($font-size-base * 0.85)); // ~12px
+
+$font-size-headline:             floor(($font-size-base * 3.7)); // ~48px
+
+// Line Height
+// -------------------------
+$line-height-base:               1.6796875; //1.428571429; // 20/14 or 23.515625/14
+$line-height-computed:           floor(($font-size-base * $line-height-base)); // ~20px
+
+$line-height-large:              1.33;
+$line-height-small:              1.5;
+$line-height-xs:                 1.1;
+
+// Letter Spacing
+// -------------------------
+
+$standard-letter-spacing:        1px;
