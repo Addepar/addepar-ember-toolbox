@@ -1,0 +1,360 @@
+//
+// Typography Declarations
+// -----------------------------------------------------------------------------
+//
+// CONTENTS
+//
+// LINKING FONT FILES
+// Univer Next
+// Univers Next Condensed
+// Univers Tabular
+// Gotham
+// Gotham Narrow
+// Tiempos Headline
+// Tiempos Text
+// Whitney
+// Whitney Numeric
+
+// From Fonts.com:
+// Univers Next
+// font-family: 'UniversNW01-130BUlLt';
+// font-family: 'UniversNW01-230BThin';
+// font-family: 'Univers Next W01 Light';
+// font-family: 'UniversNextW01-Regular';
+// font-family: 'Univers Next W01 Medium';
+// font-family: 'Univers Next W01 Bold';
+
+// Univers (Tabular numbers)
+// font-family: 'Univers LT W01 45 Light';
+// font-family: 'Univers LT W01 55 Roman';
+// font-family: 'Univers LT W01 65 Bold';
+
+
+// Univers Next Font Files
+// -------------------------
+
+@include addepar-font-face('Univers-Next',
+  '#{$univers-font-folder}/UniversNW01130BUlLt', ('woff', 'ttf'), $font-thin);
+
+@include addepar-font-face('Univers-Next',
+  '#{$univers-font-folder}/UniversNW01230BThin', ('woff', 'ttf'), $font-extra-light);
+
+@include addepar-font-face('Univers-Next',
+  '#{$univers-font-folder}/UniversNextW01Light', ('woff', 'ttf'), $font-light);
+
+@include addepar-font-face('Univers-Next',
+  '#{$univers-font-folder}/UniversNextW01Regular', ('woff', 'ttf'), $font-normal);
+
+@include addepar-font-face('Univers-Next',
+  '#{$univers-font-folder}/UniversNextW01Medium', ('woff', 'ttf'), $font-medium);
+
+@include addepar-font-face('Univers-Next',
+  '#{$univers-font-folder}/UniversNextW01Bold', ('woff', 'ttf'), $font-bold);
+
+@include addepar-font-face('Univers-Next',
+  '#{$univers-font-folder}/UniversNextW01Heavy', ('woff', 'ttf'), $font-extra-bold);
+
+@include addepar-font-face('Univers-Next',
+  '#{$univers-font-folder}/UniversNextW01Black', ('woff', 'ttf'), $font-heavy);
+
+
+//  Univers Next Condensed
+// -------------------------
+
+@include addepar-font-face('Univers-Next-Condensed',
+  '#{$univers-font-folder}/UniversNW01120CdUlLt', ('woff', 'ttf'), $font-thin);
+
+@include addepar-font-face('Univers-Next-Condensed',
+  '#{$univers-font-folder}/UniversNW01220CdThin', ('woff', 'ttf'), $font-extra-light);
+
+@include addepar-font-face('Univers-Next-Condensed',
+  '#{$univers-font-folder}/UniversNW01320CdLt', ('woff', 'ttf'), $font-light);
+
+@include addepar-font-face('Univers-Next-Condensed',
+  '#{$univers-font-folder}/UniversNW01420CdRegular', ('woff', 'ttf'), $font-normal);
+
+@include addepar-font-face('Univers-Next-Condensed',
+  '#{$univers-font-folder}/UniversNW01520CdMedium', ('woff', 'ttf'), $font-medium);
+
+@include addepar-font-face('Univers-Next-Condensed',
+  '#{$univers-font-folder}/UniversNW01620CdBold', ('woff', 'ttf'), $font-bold);
+
+@include addepar-font-face('Univers-Next-Condensed',
+  '#{$univers-font-folder}/UniversNW01720CdHeavy', ('woff', 'ttf'), $font-extra-bold);
+
+@include addepar-font-face('Univers-Next-Condensed',
+  '#{$univers-font-folder}/UniversNW01820CdBlk', ('woff', 'ttf'), $font-heavy);
+
+
+//  Univers Tabular Numbers
+// -------------------------
+
+@include addepar-font-face('Univers-Tabular',
+  '#{$univers-font-folder}/UniversLTLight', ('woff', 'ttf'), $font-light);
+
+@include addepar-font-face('Univers-Tabular',
+  '#{$univers-font-folder}/UniversLTRoman', ('woff', 'ttf'), $font-normal);
+
+@include addepar-font-face('Univers-Tabular',
+  '#{$univers-font-folder}/UniversLTBold', ('woff', 'ttf'), $font-bold);
+
+
+// Gotham Font Files
+// -------------------------
+
+@include addepar-font-face('Gotham',
+  '#{$gotham-font-folder}/Gotham-Thin', ('woff', 'ttf'), $font-thin);
+
+@include addepar-font-face('Gotham', '#{$gotham-font-folder}/Gotham-ThinItalic',
+  ('woff', 'ttf'), $font-thin, italic);
+
+@include addepar-font-face('Gotham',
+  '#{$gotham-font-folder}/Gotham-XLight', ('woff', 'ttf'), $font-extra-light);
+
+@include addepar-font-face('Gotham',
+  '#{$gotham-font-folder}/Gotham-XLightItalic', ('woff', 'ttf'),
+    $font-extra-light, italic);
+
+@include addepar-font-face('Gotham',
+  '#{$gotham-font-folder}/Gotham-Light', ('woff', 'ttf'), $font-light);
+
+@include addepar-font-face('Gotham',
+  '#{$gotham-font-folder}/Gotham-LightItalic', ('woff', 'ttf'), $font-light,
+    italic);
+
+@include addepar-font-face('Gotham',
+  '#{$gotham-font-folder}/Gotham-Book', ('woff', 'ttf'), $font-normal);
+
+@include addepar-font-face('Gotham', '#{$gotham-font-folder}/Gotham-BookItalic',
+  ('woff', 'ttf'), $font-normal, italic);
+
+@include addepar-font-face('Gotham',
+  '#{$gotham-font-folder}/Gotham-Medium', ('woff', 'ttf'), $font-medium);
+
+@include addepar-font-face('Gotham', '#{$gotham-font-folder}/Gotham-MediumItalic',
+  ('woff', 'ttf'), $font-medium, italic);
+
+@include addepar-font-face('Gotham',
+  '#{$gotham-font-folder}/Gotham-Bold', ('woff', 'ttf'), $font-bold);
+
+@include addepar-font-face('Gotham', '#{$gotham-font-folder}/Gotham-BoldItalic',
+  ('woff', 'ttf'), $font-bold, italic);
+
+@include addepar-font-face('Gotham',
+  '#{$gotham-font-folder}/Gotham-Black', ('woff', 'ttf'), $font-extra-bold);
+
+@include addepar-font-face('Gotham',
+  '#{$gotham-font-folder}/Gotham-BlackItalic', ('woff', 'ttf'),
+    $font-extra-bold, italic);
+
+@include addepar-font-face('Gotham',
+  '#{$gotham-font-folder}/Gotham-Ultra', ('woff', 'ttf'), $font-heavy);
+
+@include addepar-font-face('Gotham', '#{$gotham-font-folder}/Gotham-UltraItalic',
+  ('woff', 'ttf'), $font-heavy, italic);
+
+
+// Gotham Narrow Font Files
+// -------------------------
+
+@include addepar-font-face('Gotham Narrow',
+  '#{$gotham-narrow-font-folder}/GothamNarrow-Thin', ('woff', 'ttf'),
+    $font-thin);
+
+@include addepar-font-face('Gotham Narrow',
+  '#{$gotham-narrow-font-folder}/GothamNarrow-ThinItalic', ('woff', 'ttf'),
+    $font-thin, italic);
+
+@include addepar-font-face('Gotham Narrow',
+  '#{$gotham-narrow-font-folder}/GothamNarrow-XLight', ('woff', 'ttf'), $font-extra-light);
+
+@include addepar-font-face('Gotham Narrow',
+  '#{$gotham-narrow-font-folder}/GothamNarrow-XLightItalic', ('woff', 'ttf'),
+    $font-extra-light, italic);
+
+@include addepar-font-face('Gotham Narrow',
+  '#{$gotham-narrow-font-folder}/GothamNarrow-Light', ('woff', 'ttf'), $font-light);
+
+@include addepar-font-face('Gotham Narrow', '#{$gotham-narrow-font-folder}/GothamNarrow-LightItalic',
+  ('woff', 'ttf'), $font-light, italic);
+
+@include addepar-font-face('Gotham Narrow',
+  '#{$gotham-narrow-font-folder}/GothamNarrow-Book', ('woff', 'ttf'), $font-normal);
+
+@include addepar-font-face('Gotham Narrow', '#{$gotham-narrow-font-folder}/GothamNarrow-BookItalic',
+  ('woff', 'ttf'), $font-normal, italic);
+
+@include addepar-font-face('Gotham Narrow',
+  '#{$gotham-narrow-font-folder}/GothamNarrow-Medium', ('woff', 'ttf'), $font-medium);
+
+@include addepar-font-face('Gotham Narrow', '#{$gotham-narrow-font-folder}/GothamNarrow-MediumItalic',
+  ('woff', 'ttf'), $font-medium, italic);
+
+@include addepar-font-face('Gotham Narrow',
+  '#{$gotham-narrow-font-folder}/GothamNarrow-Bold', ('woff', 'ttf'), $font-bold);
+
+@include addepar-font-face('Gotham Narrow', '#{$gotham-narrow-font-folder}/GothamNarrow-BoldItalic',
+  ('woff', 'ttf'), $font-bold, italic);
+
+@include addepar-font-face('Gotham Narrow',
+  '#{$gotham-narrow-font-folder}/GothamNarrow-Black', ('woff', 'ttf'), $font-extra-bold);
+
+@include addepar-font-face('Gotham Narrow', '#{$gotham-narrow-font-folder}/GothamNarrow-BlackItalic',
+  ('woff', 'ttf'), $font-extra-bold, italic);
+
+@include addepar-font-face('Gotham Narrow',
+  '#{$gotham-narrow-font-folder}/GothamNarrow-Ultra', ('woff', 'ttf'), $font-heavy);
+
+@include addepar-font-face('Gotham Narrow', '#{$gotham-narrow-font-folder}/GothamNarrow-UltraItalic',
+  ('woff', 'ttf'), $font-heavy, italic);
+
+
+// Tiempos Headline Font Files
+// -------------------------
+
+@include addepar-font-face('Tiempos Headline',
+  '#{$tiempos-headline-font-folder}/TiemposHeadlineWeb-Light', ('woff', 'eot'), $font-light);
+
+@include addepar-font-face('Tiempos Headline', '#{$tiempos-headline-font-folder}/TiemposHeadlineWeb-LightItalic',
+  ('woff', 'eot'), $font-light, italic);
+
+@include addepar-font-face('Tiempos Headline',
+  '#{$tiempos-headline-font-folder}/TiemposHeadlineWeb-Regular', ('woff', 'eot'), $font-normal);
+
+@include addepar-font-face('Tiempos Headline', '#{$tiempos-headline-font-folder}/TiemposHeadlineWeb-RegularItalic',
+  ('woff', 'eot'), $font-normal, italic);
+
+@include addepar-font-face('Tiempos Headline',
+  '#{$tiempos-headline-font-folder}/TiemposHeadlineWeb-Medium', ('woff', 'eot'), $font-medium);
+
+@include addepar-font-face('Tiempos Headline', '#{$tiempos-headline-font-folder}/TiemposHeadlineWeb-MediumItalic',
+  ('woff', 'eot'), $font-medium, italic);
+
+@include addepar-font-face('Tiempos Headline',
+  '#{$tiempos-headline-font-folder}/TiemposHeadlineWeb-Semibold', ('woff', 'eot'), $font-semi-bold);
+
+@include addepar-font-face('Tiempos Headline', '#{$tiempos-headline-font-folder}/TiemposHeadlineWeb-SemiboldItalic',
+  ('woff', 'eot'), $font-semi-bold, italic);
+
+@include addepar-font-face('Tiempos Headline',
+  '#{$tiempos-headline-font-folder}/TiemposHeadlineWeb-Bold', ('woff', 'eot'), $font-bold);
+
+@include addepar-font-face('Tiempos Headline', '#{$tiempos-headline-font-folder}/TiemposHeadlineWeb-BoldItalic',
+  ('woff', 'eot'), $font-bold, italic);
+
+@include addepar-font-face('Tiempos Headline',
+  '#{$tiempos-headline-font-folder}/TiemposHeadlineWeb-Black', ('woff', 'eot'), $font-extra-bold);
+
+@include addepar-font-face('Tiempos Headline', '#{$tiempos-headline-font-folder}/TiemposHeadlineWeb-BlackItalic',
+  ('woff', 'eot'), $font-extra-bold, italic);
+
+
+// Tiempos Text Font Files
+// -------------------------
+
+@include addepar-font-face('Tiempos Text', '#{$tiempos-text-font-folder}/TiemposTextWeb-Regular',
+  ('woff', 'eot'), $font-normal);
+
+@include addepar-font-face('Tiempos Text', '#{$tiempos-text-font-folder}/TiemposTextWeb-RegularItalic',
+  ('woff', 'eot'), $font-normal, italic);
+
+@include addepar-font-face('Tiempos Text', '#{$tiempos-text-font-folder}/TiemposTextWeb-Semibold',
+  ('woff', 'eot'), $font-semi-bold);
+
+@include addepar-font-face('Tiempos Text', '#{$tiempos-text-font-folder}/TiemposTextWeb-SemiboldItalic',
+  ('woff', 'eot'), $font-semi-bold, italic);
+
+
+// Whitney Font Files
+// -------------------------
+
+@include addepar-font-face('Whitney',
+  '#{$whitney-font-folder}/Whitney-Light', ('woff', 'ttf'), $font-light);
+
+@include addepar-font-face('Whitney', '#{$whitney-font-folder}/Whitney-LightItalic',
+  ('woff', 'ttf'), $font-light, italic);
+
+@include addepar-font-face('Whitney',
+  '#{$whitney-font-folder}/Whitney-Book', ('woff', 'ttf'), $font-normal);
+
+@include addepar-font-face('Whitney', '#{$whitney-font-folder}/Whitney-BookItalic',
+  ('woff', 'ttf'), $font-normal, italic);
+
+@include addepar-font-face('Whitney',
+  '#{$whitney-font-folder}/Whitney-Medium', ('woff', 'ttf'), $font-medium);
+
+@include addepar-font-face('Whitney', '#{$whitney-font-folder}/Whitney-MediumItalic',
+  ('woff', 'ttf'), $font-medium, italic);
+
+@include addepar-font-face('Whitney',
+  '#{$whitney-font-folder}/Whitney-Semibold', ('woff', 'ttf'), $font-bold);
+
+@include addepar-font-face('Whitney', '#{$whitney-font-folder}/Whitney-SemiboldItalic',
+  ('woff', 'ttf'), $font-bold, italic);
+
+@include addepar-font-face('Whitney',
+  '#{$whitney-font-folder}/Whitney-Bold', ('woff', 'ttf'), $font-extra-bold);
+
+@include addepar-font-face('Whitney', '#{$whitney-font-folder}/Whitney-BoldItalic',
+  ('woff', 'ttf'), $font-extra-bold, italic);
+
+@include addepar-font-face('Whitney',
+  '#{$whitney-font-folder}/Whitney-Black', ('woff', 'ttf'), $font-heavy);
+
+@include addepar-font-face('Whitney', '#{$whitney-font-folder}/Whitney-BlackItalic',
+  ('woff', 'ttf'), $font-heavy, italic);
+
+
+//  Whitney Numeric Font Files
+// -------------------------
+
+@include addepar-font-face('Whitney Numeric',
+  '#{$whitney-numeric-font-folder}/WhitneyNumeric-Light', ('woff', 'ttf'), $font-light);
+
+@include addepar-font-face('Whitney Numeric', '#{$whitney-numeric-font-folder}/WhitneyNumeric-LightItalic',
+  ('woff', 'ttf'), $font-light, italic);
+
+@include addepar-font-face('Whitney Numeric',
+  '#{$whitney-numeric-font-folder}/WhitneyNumeric-Book', ('woff', 'ttf'), $font-normal);
+
+@include addepar-font-face('Whitney Numeric', '#{$whitney-numeric-font-folder}/WhitneyNumeric-BookItalic',
+  ('woff', 'ttf'), $font-normal, italic);
+
+@include addepar-font-face('Whitney Numeric',
+  '#{$whitney-numeric-font-folder}/WhitneyNumeric-Medium', ('woff', 'ttf'), $font-medium);
+
+@include addepar-font-face('Whitney Numeric', '#{$whitney-numeric-font-folder}/WhitneyNumeric-MediumItalic',
+  ('woff', 'ttf'), $font-medium, italic);
+
+@include addepar-font-face('Whitney Numeric',
+  '#{$whitney-numeric-font-folder}/WhitneyNumeric-Semibold', ('woff', 'ttf'), $font-bold);
+
+@include addepar-font-face('Whitney Numeric', '#{$whitney-numeric-font-folder}/WhitneyNumeric-SemiboldItalic',
+  ('woff', 'ttf'), $font-bold, italic);
+
+@include addepar-font-face('Whitney Numeric',
+  '#{$whitney-numeric-font-folder}/WhitneyNumeric-Bold', ('woff', 'ttf'), $font-extra-bold);
+
+@include addepar-font-face('Whitney Numeric', '#{$whitney-numeric-font-folder}/WhitneyNumeric-BoldItalic',
+  ('woff', 'ttf'), $font-extra-bold, italic);
+
+@include addepar-font-face('Whitney Numeric',
+  '#{$whitney-numeric-font-folder}/WhitneyNumeric-Black', ('woff', 'ttf'), $font-heavy);
+
+@include addepar-font-face('Whitney Numeric', '#{$whitney-numeric-font-folder}/WhitneyNumeric-BlackItalic',
+  ('woff', 'ttf'), $font-heavy, italic);
+
+
+// Global Typography Resets
+// -----------------------------------------------------------------------------
+
+html,
+body {
+  * {
+    text-rendering: optimizeLegibility;
+
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}

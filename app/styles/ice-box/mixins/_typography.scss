@@ -1,0 +1,40 @@
+//
+// Typography Mixins
+// -----------------------------------------------------------------------------
+// TBD, add documentation.
+
+// Creates Addepar specific font face declaration, based on Compass font-face mixin
+// Assumes all font types have the same base file name (Addepar standard)
+// For best results, declare type in this order: woff, otf/ttf, svg, eot
+// Required Inputs: font name, font file, list of file types- example: ('woff', 'ttf')
+// Optional: weight (default 400), and style (default normal),
+//           post-fix (added to end of file).
+@mixin addepar-font-face($name, $font-file, $file-types, $weight: 400, $style: normal, $post-fix: false) {
+  $font-files: null; // concatenated string of font declarations
+  $format: null; // used when type format is not the same as its extension
+  $pf: null; // used for optional post-fix, usually for svg
+  @if $post-fix {
+    $pf: '?#{$post-fix}';
+  }
+
+  @font-face {
+    font-family: $name;
+    @each $type in $file-types {
+      // Need to add special rules for IE for eot files
+      @if $type == 'eot' {
+        src: url('#{$font-file}.#{$type}#{$pf}');
+        $font-files: url('#{$font-file}.#{$type}?#iefix#{$pf}') format('embedded-opentype'), $font-files;
+      } @else {
+        // ttf and otf have to be written out as truetype/opentype
+        // for the format (but still stay ttf/otf for the file extentions)
+        @if $type == 'ttf' { $format: 'truetype'; }
+        @if $type == 'otf' { $format: 'opentype'; }
+        @else { $format: $type; }
+        $font-files: $font-files, url('#{$font-file}.#{$type}#{$pf}') format($format);
+      }
+    }
+    src: $font-files;
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
