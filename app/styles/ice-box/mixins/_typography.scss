@@ -38,3 +38,14 @@
     font-style: $style;
   }
 }
+
+// Addepar specific font rendering settings
+@mixin font-settings() {
+  * {
+    text-rendering: optimizeLegibility;
+
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}

@@ -1,0 +1,11 @@
+//
+// Spacing
+// -----------------------------------------------------------------------------
+// 8pt grid system
+// TBD, add documentation
+
+$spacing-default:                8px !default;
+$spacing-small:                  $spacing-default * 0.5 !default;
+$spacing-double:                 $spacing-default * 2 !default;
+$spacing-triple:                 $spacing-default * 3 !default;
+$spacing-quadruple:              $spacing-default * 4 !default;
