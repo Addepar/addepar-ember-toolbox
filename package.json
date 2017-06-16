@@ -1,7 +1,7 @@
 {
-  "name": "ice-box",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "name": "@addepar/ice-box",
+  "version": "0.0.1",
+  "description": "Shared styles and helper for ICE components",
   "keywords": [
     "ember-addon"
   ],
