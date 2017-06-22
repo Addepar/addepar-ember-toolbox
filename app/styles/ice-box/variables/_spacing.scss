@@ -1,8 +1,14 @@
-//
 // Spacing
-// -----------------------------------------------------------------------------
-// 8pt grid system
-// TBD, add documentation
+//
+// 8pt grid spacing system
+//
+// $spacing-default   - 8px base that all spacing vars are based off of
+// $spacing-small     - 1/2 of base spacing (4px)
+// $spacing-double    - 2x base spacing (16px)
+// $spacing-triple    - 3x base spacing (24px)
+// $spacing-quadruple - 4x base spacing (32px)
+//
+// Styleguide Ice-Box.Variables.Spacing
 
 $spacing-default:                8px !default;
 $spacing-small:                  $spacing-default * 0.5 !default;

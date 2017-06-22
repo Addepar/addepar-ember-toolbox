@@ -1,6 +1,6 @@
 {
   "name": "@addepar/ice-box",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Shared styles and helper for ICE components",
   "keywords": [
     "ember-addon"
