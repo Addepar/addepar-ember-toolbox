@@ -1,14 +1,39 @@
-//
-// Typography Mixins
-// -----------------------------------------------------------------------------
-// TBD, add documentation.
+/* Typography Mixins */
 
-// Creates Addepar specific font face declaration, based on Compass font-face mixin
-// Assumes all font types have the same base file name (Addepar standard)
-// For best results, declare type in this order: woff, otf/ttf, svg, eot
-// Required Inputs: font name, font file, list of file types- example: ('woff', 'ttf')
-// Optional: weight (default 400), and style (default normal),
-//           post-fix (added to end of file).
+
+/*
+@addepar-font-face()
+
+Creates Addepar specific font face declaration, based on Compass font-face mixin
+Assumes all font types have the same base file name (Addepar standard)
+For best results, declare type in this order: woff, otf/ttf, svg, eot
+
+### Example Usage:
+
+  `@include addepar-font-face('Univers-Next',
+    '#{$univers-font-folder}/UniversNextW01Regular', ('woff', 'ttf'), $font-normal);`
+
+### Parameters:
+
+* $name = Font name
+* $font-file = File name
+* $file-types = Array of different font file types
+* $weight = 400 - Font weight
+* $style = normal - Font style
+* $post-fix = false - Add a custom string to the end of the font file, usually used for cross browser fixes
+
+### Example Output:
+  ```
+  @font-face {
+    font-family: "Univers-Next";
+    src: url("/ice-box/fonts/UniversNextW01Regular.woff") format("woff"), url("/ice-box/fonts/UniversNextW01Regular.ttf") format("ttf");
+    font-weight: 400;
+    font-style: normal;
+  }
+  ```
+
+Styleguide: Ice Box - Mixins - Typography - @addepar-font-face()
+*/
 @mixin addepar-font-face($name, $font-file, $file-types, $weight: 400, $style: normal, $post-fix: false) {
   $font-files: null; // concatenated string of font declarations
   $format: null; // used when type format is not the same as its extension
@@ -39,7 +64,33 @@
   }
 }
 
-// Addepar specific font rendering settings
+
+/*
+@font-settings()
+
+Addepar specific font rendering settings
+
+Example Usage:
+
+  `@include @font-settings();`
+
+Parameters:
+
+* none
+
+Example Output:
+  ```
+  * {
+    text-rendering: optimizeLegibility;
+
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  ```
+
+Styleguide: Ice Box - Mixins - Typography - @font-settings()
+*/
 @mixin font-settings() {
   * {
     text-rendering: optimizeLegibility;
