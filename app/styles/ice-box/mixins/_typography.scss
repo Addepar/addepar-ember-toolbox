@@ -11,7 +11,7 @@ For best results, declare type in this order: woff, otf/ttf, svg, eot
 ### Example Usage:
 
   `@include addepar-font-face('Univers-Next',
-    '#{$univers-font-folder}/UniversNextW01Regular', ('woff', 'ttf'), $font-normal);`
+    '/fonts/UniversNextW01Regular', ('woff', 'ttf'), $font-normal);`
 
 ### Parameters:
 
