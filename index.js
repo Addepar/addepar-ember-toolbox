@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'ice-box'
+  name: '@addepar/ice-box'
 };
