@@ -1,12 +1,15 @@
 /* eslint-env node */
 module.exports = {
+  "framework": "qunit",
   "test_page": "tests/index.html?hidepassed",
-  "disable_watching": true,
   "launch_in_ci": [
-    "PhantomJS"
+    "Chrome"
   ],
   "launch_in_dev": [
-    "PhantomJS",
     "Chrome"
-  ]
+  ],
+  "reporter": "xunit",
+  "xunit_intermediate_output": true,
+  "browser_start_timeout": 300,
+  "report_file": "test-results.xml"
 };
