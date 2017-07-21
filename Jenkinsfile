@@ -1,6 +1,3 @@
-Random rand = new Random()
-xvfbRand = rand.nextInt(1000)
-
 pipeline {
     agent { label 'tests' }
 
@@ -8,15 +5,15 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    def xvfbNum = xvfbRand
-                    wrap([$class: 'Xvfb', debug: true, displayNameOffset: xvfbNum, additionalOptions: '-ac', screen: '1280x1024x24']) {
+                    Random rand = new Random()
+
+                    wrap([$class: 'Xvfb', debug: true, displayNameOffset: rand.nextInt(1000), additionalOptions: '-ac', screen: '1280x1024x24']) {
                         try {
                             retry (2) {
                                 timeout(time: 30, unit: 'MINUTES') {
                                     sh """
                                         yarn --frozen-lockfile
-                                        ./node_modules/bower/bin/bower install
-                                        ./node_modules/ember-cli/bin/ember t
+                                        ./node_modules/ember-cli/bin/ember try:each
                                     """
                                 }
                             }
