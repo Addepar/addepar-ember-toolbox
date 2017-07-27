@@ -1,6 +1,5 @@
 /* Typography Mixins */
 
-
 /*
 @addepar-font-face()
 
@@ -72,7 +71,11 @@ Addepar specific font rendering settings
 
 Example Usage:
 
-  `@include @font-settings();`
+  ```
+  body {
+    @include @font-settings();
+  }
+  ```
 
 Parameters:
 
@@ -99,4 +102,43 @@ Styleguide: Ice Box - Mixins - Typography - @font-settings()
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+}
+
+/*
+@ellipsis-overflow()
+
+Standard setup to make text in an element ellipsize.
+Element must have some kind of width applied.
+
+Example Usage:
+
+  ```
+  .element {
+    @include @ellipsis-overflow();
+  }
+  ```
+
+Parameters:
+
+* none
+
+Example Output:
+  ```
+  .element {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+  }
+  ```
+
+Styleguide: Ice Box - Mixins - Typography - @ellipsis-overflow()
+*/
+@mixin ellipsis-overflow() {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
 }

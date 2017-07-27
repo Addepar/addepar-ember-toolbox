@@ -1,0 +1,23 @@
+// Core Button Functions
+// -----------------------------------------------------------------------------
+
+// The sass lighten/darken functions work indiscriminately without checking to see
+// the range of color thats available, so we often get white/black colors when we shouldn't.
+// This function calculates the range of color we are left with between black and white,
+// and then increments the color based on that.
+// This should be pulled in from ice-box at some point.
+@function ice-adjust-color($color, $increment) {
+  @if ($color == transparent) {
+    @return $color;
+  } @else {
+    $r: red($color);
+    $g: green($color);
+    $b: blue($color);
+
+    $red: $r + ((255 - $r) * $increment);
+    $green: $g + ((255 - $g) * $increment);
+    $blue: $b + ((255 - $b) * $increment);
+
+    @return rgb($red, $green, $blue);
+  }
+}
