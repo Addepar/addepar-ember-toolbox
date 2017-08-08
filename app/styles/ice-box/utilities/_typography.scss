@@ -25,12 +25,6 @@ Styleguide: Ice Box - Utilties - Typography - Custom Fonts
 // -------------------------
 
 @include addepar-font-face('Univers-Next',
-  '#{$univers-font-folder}/UniversNW01130BUlLt', ('woff', 'ttf'), $font-thin);
-
-@include addepar-font-face('Univers-Next',
-  '#{$univers-font-folder}/UniversNW01230BThin', ('woff', 'ttf'), $font-extra-light);
-
-@include addepar-font-face('Univers-Next',
   '#{$univers-font-folder}/UniversNextW01Light', ('woff', 'ttf'), $font-light);
 
 @include addepar-font-face('Univers-Next',
@@ -42,21 +36,9 @@ Styleguide: Ice Box - Utilties - Typography - Custom Fonts
 @include addepar-font-face('Univers-Next',
   '#{$univers-font-folder}/UniversNextW01Bold', ('woff', 'ttf'), $font-bold);
 
-@include addepar-font-face('Univers-Next',
-  '#{$univers-font-folder}/UniversNextW01Heavy', ('woff', 'ttf'), $font-extra-bold);
-
-@include addepar-font-face('Univers-Next',
-  '#{$univers-font-folder}/UniversNextW01Black', ('woff', 'ttf'), $font-heavy);
-
 
 //  Univers Next Condensed
 // -------------------------
-
-@include addepar-font-face('Univers-Next-Condensed',
-  '#{$univers-font-folder}/UniversNW01120CdUlLt', ('woff', 'ttf'), $font-thin);
-
-@include addepar-font-face('Univers-Next-Condensed',
-  '#{$univers-font-folder}/UniversNW01220CdThin', ('woff', 'ttf'), $font-extra-light);
 
 @include addepar-font-face('Univers-Next-Condensed',
   '#{$univers-font-folder}/UniversNW01320CdLt', ('woff', 'ttf'), $font-light);
@@ -70,12 +52,6 @@ Styleguide: Ice Box - Utilties - Typography - Custom Fonts
 @include addepar-font-face('Univers-Next-Condensed',
   '#{$univers-font-folder}/UniversNW01620CdBold', ('woff', 'ttf'), $font-bold);
 
-@include addepar-font-face('Univers-Next-Condensed',
-  '#{$univers-font-folder}/UniversNW01720CdHeavy', ('woff', 'ttf'), $font-extra-bold);
-
-@include addepar-font-face('Univers-Next-Condensed',
-  '#{$univers-font-folder}/UniversNW01820CdBlk', ('woff', 'ttf'), $font-heavy);
-
 
 //  Univers Tabular Numbers
 // -------------------------
@@ -88,116 +64,6 @@ Styleguide: Ice Box - Utilties - Typography - Custom Fonts
 
 @include addepar-font-face('Univers-Tabular',
   '#{$univers-font-folder}/UniversLTBold', ('woff', 'ttf'), $font-bold);
-
-
-// Gotham Font Files
-// -------------------------
-
-@include addepar-font-face('Gotham',
-  '#{$gotham-font-folder}/Gotham-Thin', ('woff', 'ttf'), $font-thin);
-
-@include addepar-font-face('Gotham', '#{$gotham-font-folder}/Gotham-ThinItalic',
-  ('woff', 'ttf'), $font-thin, italic);
-
-@include addepar-font-face('Gotham',
-  '#{$gotham-font-folder}/Gotham-XLight', ('woff', 'ttf'), $font-extra-light);
-
-@include addepar-font-face('Gotham',
-  '#{$gotham-font-folder}/Gotham-XLightItalic', ('woff', 'ttf'),
-    $font-extra-light, italic);
-
-@include addepar-font-face('Gotham',
-  '#{$gotham-font-folder}/Gotham-Light', ('woff', 'ttf'), $font-light);
-
-@include addepar-font-face('Gotham',
-  '#{$gotham-font-folder}/Gotham-LightItalic', ('woff', 'ttf'), $font-light,
-    italic);
-
-@include addepar-font-face('Gotham',
-  '#{$gotham-font-folder}/Gotham-Book', ('woff', 'ttf'), $font-normal);
-
-@include addepar-font-face('Gotham', '#{$gotham-font-folder}/Gotham-BookItalic',
-  ('woff', 'ttf'), $font-normal, italic);
-
-@include addepar-font-face('Gotham',
-  '#{$gotham-font-folder}/Gotham-Medium', ('woff', 'ttf'), $font-medium);
-
-@include addepar-font-face('Gotham', '#{$gotham-font-folder}/Gotham-MediumItalic',
-  ('woff', 'ttf'), $font-medium, italic);
-
-@include addepar-font-face('Gotham',
-  '#{$gotham-font-folder}/Gotham-Bold', ('woff', 'ttf'), $font-bold);
-
-@include addepar-font-face('Gotham', '#{$gotham-font-folder}/Gotham-BoldItalic',
-  ('woff', 'ttf'), $font-bold, italic);
-
-@include addepar-font-face('Gotham',
-  '#{$gotham-font-folder}/Gotham-Black', ('woff', 'ttf'), $font-extra-bold);
-
-@include addepar-font-face('Gotham',
-  '#{$gotham-font-folder}/Gotham-BlackItalic', ('woff', 'ttf'),
-    $font-extra-bold, italic);
-
-@include addepar-font-face('Gotham',
-  '#{$gotham-font-folder}/Gotham-Ultra', ('woff', 'ttf'), $font-heavy);
-
-@include addepar-font-face('Gotham', '#{$gotham-font-folder}/Gotham-UltraItalic',
-  ('woff', 'ttf'), $font-heavy, italic);
-
-
-// Gotham Narrow Font Files
-// -------------------------
-
-@include addepar-font-face('Gotham Narrow',
-  '#{$gotham-narrow-font-folder}/GothamNarrow-Thin', ('woff', 'ttf'),
-    $font-thin);
-
-@include addepar-font-face('Gotham Narrow',
-  '#{$gotham-narrow-font-folder}/GothamNarrow-ThinItalic', ('woff', 'ttf'),
-    $font-thin, italic);
-
-@include addepar-font-face('Gotham Narrow',
-  '#{$gotham-narrow-font-folder}/GothamNarrow-XLight', ('woff', 'ttf'), $font-extra-light);
-
-@include addepar-font-face('Gotham Narrow',
-  '#{$gotham-narrow-font-folder}/GothamNarrow-XLightItalic', ('woff', 'ttf'),
-    $font-extra-light, italic);
-
-@include addepar-font-face('Gotham Narrow',
-  '#{$gotham-narrow-font-folder}/GothamNarrow-Light', ('woff', 'ttf'), $font-light);
-
-@include addepar-font-face('Gotham Narrow', '#{$gotham-narrow-font-folder}/GothamNarrow-LightItalic',
-  ('woff', 'ttf'), $font-light, italic);
-
-@include addepar-font-face('Gotham Narrow',
-  '#{$gotham-narrow-font-folder}/GothamNarrow-Book', ('woff', 'ttf'), $font-normal);
-
-@include addepar-font-face('Gotham Narrow', '#{$gotham-narrow-font-folder}/GothamNarrow-BookItalic',
-  ('woff', 'ttf'), $font-normal, italic);
-
-@include addepar-font-face('Gotham Narrow',
-  '#{$gotham-narrow-font-folder}/GothamNarrow-Medium', ('woff', 'ttf'), $font-medium);
-
-@include addepar-font-face('Gotham Narrow', '#{$gotham-narrow-font-folder}/GothamNarrow-MediumItalic',
-  ('woff', 'ttf'), $font-medium, italic);
-
-@include addepar-font-face('Gotham Narrow',
-  '#{$gotham-narrow-font-folder}/GothamNarrow-Bold', ('woff', 'ttf'), $font-bold);
-
-@include addepar-font-face('Gotham Narrow', '#{$gotham-narrow-font-folder}/GothamNarrow-BoldItalic',
-  ('woff', 'ttf'), $font-bold, italic);
-
-@include addepar-font-face('Gotham Narrow',
-  '#{$gotham-narrow-font-folder}/GothamNarrow-Black', ('woff', 'ttf'), $font-extra-bold);
-
-@include addepar-font-face('Gotham Narrow', '#{$gotham-narrow-font-folder}/GothamNarrow-BlackItalic',
-  ('woff', 'ttf'), $font-extra-bold, italic);
-
-@include addepar-font-face('Gotham Narrow',
-  '#{$gotham-narrow-font-folder}/GothamNarrow-Ultra', ('woff', 'ttf'), $font-heavy);
-
-@include addepar-font-face('Gotham Narrow', '#{$gotham-narrow-font-folder}/GothamNarrow-UltraItalic',
-  ('woff', 'ttf'), $font-heavy, italic);
 
 
 // Tiempos Headline Font Files
@@ -222,22 +88,10 @@ Styleguide: Ice Box - Utilties - Typography - Custom Fonts
   ('woff', 'eot'), $font-medium, italic);
 
 @include addepar-font-face('Tiempos Headline',
-  '#{$tiempos-headline-font-folder}/TiemposHeadlineWeb-Semibold', ('woff', 'eot'), $font-semi-bold);
-
-@include addepar-font-face('Tiempos Headline', '#{$tiempos-headline-font-folder}/TiemposHeadlineWeb-SemiboldItalic',
-  ('woff', 'eot'), $font-semi-bold, italic);
-
-@include addepar-font-face('Tiempos Headline',
   '#{$tiempos-headline-font-folder}/TiemposHeadlineWeb-Bold', ('woff', 'eot'), $font-bold);
 
 @include addepar-font-face('Tiempos Headline', '#{$tiempos-headline-font-folder}/TiemposHeadlineWeb-BoldItalic',
   ('woff', 'eot'), $font-bold, italic);
-
-@include addepar-font-face('Tiempos Headline',
-  '#{$tiempos-headline-font-folder}/TiemposHeadlineWeb-Black', ('woff', 'eot'), $font-extra-bold);
-
-@include addepar-font-face('Tiempos Headline', '#{$tiempos-headline-font-folder}/TiemposHeadlineWeb-BlackItalic',
-  ('woff', 'eot'), $font-extra-bold, italic);
 
 
 // Tiempos Text Font Files
@@ -250,90 +104,10 @@ Styleguide: Ice Box - Utilties - Typography - Custom Fonts
   ('woff', 'eot'), $font-normal, italic);
 
 @include addepar-font-face('Tiempos Text', '#{$tiempos-text-font-folder}/TiemposTextWeb-Semibold',
-  ('woff', 'eot'), $font-semi-bold);
+  ('woff', 'eot'), $font-medium);
 
 @include addepar-font-face('Tiempos Text', '#{$tiempos-text-font-folder}/TiemposTextWeb-SemiboldItalic',
-  ('woff', 'eot'), $font-semi-bold, italic);
-
-
-// Whitney Font Files
-// -------------------------
-
-@include addepar-font-face('Whitney',
-  '#{$whitney-font-folder}/Whitney-Light', ('woff', 'ttf'), $font-light);
-
-@include addepar-font-face('Whitney', '#{$whitney-font-folder}/Whitney-LightItalic',
-  ('woff', 'ttf'), $font-light, italic);
-
-@include addepar-font-face('Whitney',
-  '#{$whitney-font-folder}/Whitney-Book', ('woff', 'ttf'), $font-normal);
-
-@include addepar-font-face('Whitney', '#{$whitney-font-folder}/Whitney-BookItalic',
-  ('woff', 'ttf'), $font-normal, italic);
-
-@include addepar-font-face('Whitney',
-  '#{$whitney-font-folder}/Whitney-Medium', ('woff', 'ttf'), $font-medium);
-
-@include addepar-font-face('Whitney', '#{$whitney-font-folder}/Whitney-MediumItalic',
-  ('woff', 'ttf'), $font-medium, italic);
-
-@include addepar-font-face('Whitney',
-  '#{$whitney-font-folder}/Whitney-Semibold', ('woff', 'ttf'), $font-bold);
-
-@include addepar-font-face('Whitney', '#{$whitney-font-folder}/Whitney-SemiboldItalic',
-  ('woff', 'ttf'), $font-bold, italic);
-
-@include addepar-font-face('Whitney',
-  '#{$whitney-font-folder}/Whitney-Bold', ('woff', 'ttf'), $font-extra-bold);
-
-@include addepar-font-face('Whitney', '#{$whitney-font-folder}/Whitney-BoldItalic',
-  ('woff', 'ttf'), $font-extra-bold, italic);
-
-@include addepar-font-face('Whitney',
-  '#{$whitney-font-folder}/Whitney-Black', ('woff', 'ttf'), $font-heavy);
-
-@include addepar-font-face('Whitney', '#{$whitney-font-folder}/Whitney-BlackItalic',
-  ('woff', 'ttf'), $font-heavy, italic);
-
-
-//  Whitney Numeric Font Files
-// -------------------------
-
-@include addepar-font-face('Whitney Numeric',
-  '#{$whitney-numeric-font-folder}/WhitneyNumeric-Light', ('woff', 'ttf'), $font-light);
-
-@include addepar-font-face('Whitney Numeric', '#{$whitney-numeric-font-folder}/WhitneyNumeric-LightItalic',
-  ('woff', 'ttf'), $font-light, italic);
-
-@include addepar-font-face('Whitney Numeric',
-  '#{$whitney-numeric-font-folder}/WhitneyNumeric-Book', ('woff', 'ttf'), $font-normal);
-
-@include addepar-font-face('Whitney Numeric', '#{$whitney-numeric-font-folder}/WhitneyNumeric-BookItalic',
-  ('woff', 'ttf'), $font-normal, italic);
-
-@include addepar-font-face('Whitney Numeric',
-  '#{$whitney-numeric-font-folder}/WhitneyNumeric-Medium', ('woff', 'ttf'), $font-medium);
-
-@include addepar-font-face('Whitney Numeric', '#{$whitney-numeric-font-folder}/WhitneyNumeric-MediumItalic',
-  ('woff', 'ttf'), $font-medium, italic);
-
-@include addepar-font-face('Whitney Numeric',
-  '#{$whitney-numeric-font-folder}/WhitneyNumeric-Semibold', ('woff', 'ttf'), $font-bold);
-
-@include addepar-font-face('Whitney Numeric', '#{$whitney-numeric-font-folder}/WhitneyNumeric-SemiboldItalic',
-  ('woff', 'ttf'), $font-bold, italic);
-
-@include addepar-font-face('Whitney Numeric',
-  '#{$whitney-numeric-font-folder}/WhitneyNumeric-Bold', ('woff', 'ttf'), $font-extra-bold);
-
-@include addepar-font-face('Whitney Numeric', '#{$whitney-numeric-font-folder}/WhitneyNumeric-BoldItalic',
-  ('woff', 'ttf'), $font-extra-bold, italic);
-
-@include addepar-font-face('Whitney Numeric',
-  '#{$whitney-numeric-font-folder}/WhitneyNumeric-Black', ('woff', 'ttf'), $font-heavy);
-
-@include addepar-font-face('Whitney Numeric', '#{$whitney-numeric-font-folder}/WhitneyNumeric-BlackItalic',
-  ('woff', 'ttf'), $font-heavy, italic);
+  ('woff', 'eot'), $font-medium, italic);
 
 
 // Global Typography Resets
@@ -341,5 +115,7 @@ Styleguide: Ice Box - Utilties - Typography - Custom Fonts
 
 html,
 body {
+  font-family: $font-family-base;
+
   @include font-settings();
 }
