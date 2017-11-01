@@ -18,7 +18,8 @@
     "test": "ember try:each"
   },
   "dependencies": {
-    "ember-cli-babel": "^6.3.0"
+    "ember-cli-babel": "^6.3.0",
+    "ember-cli-version-checker": "^2.1.0"
   },
   "devDependencies": {
     "@addepar/eslint-config": "^1.0.0",
