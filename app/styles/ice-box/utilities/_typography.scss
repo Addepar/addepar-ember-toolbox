@@ -1,25 +1,20 @@
-/* Typography Utilities */
-
-
-/*
-Custom Font Declarations
-
-Ice box comes with all of the custom fonts that Addepar uses,
-already declared for you via the @addepar-font-face() mixin, with font weights 100-900.
-
-Markup:
-<p style="font-family: 'Univers-Next'">Univers Next</p>
-<p style="font-family: 'Univers-Next-Condensed'">Univers Next Condensed</p>
-<p style="font-family: 'Univers-Tabular'">Univers Tabular</p>
-<p style="font-family: 'Gotham'">Gotham</p>
-<p style="font-family: 'Gotham Narrow'">Gotham Narrow</p>
-<p style="font-family: 'Tiempos Headline'">Tiempos Headline</p>
-<p style="font-family: 'Tiempos Text'">Tiempos Text</p>
-<p style="font-family: 'Whitney'">Whitney</p>
-<p style="font-family: 'Whitney Numeric'">1234567890</p>
-
-Styleguide: Ice Box - Utilties - Typography - Custom Fonts
-*/
+// Custom Font Declarations
+//
+// Ice box comes with all of the custom fonts that Addepar uses,
+// already declared for you via the @addepar-font-face() mixin, with font weights 100-900.
+//
+// Markup:
+// <p style="font-family: 'Univers-Next'">Univers Next</p>
+// <p style="font-family: 'Univers-Next-Condensed'">Univers Next Condensed</p>
+// <p style="font-family: 'Univers-Tabular'">Univers Tabular</p>
+// <p style="font-family: 'Gotham'">Gotham</p>
+// <p style="font-family: 'Gotham Narrow'">Gotham Narrow</p>
+// <p style="font-family: 'Tiempos Headline'">Tiempos Headline</p>
+// <p style="font-family: 'Tiempos Text'">Tiempos Text</p>
+// <p style="font-family: 'Whitney'">Whitney</p>
+// <p style="font-family: 'Whitney Numeric'">1234567890</p>
+//
+// Styleguide: Ice Box - Utilties - Typography - Custom Fonts
 
 // Univers Next Font Files
 // -------------------------
@@ -115,7 +110,7 @@ Styleguide: Ice Box - Utilties - Typography - Custom Fonts
 
 html,
 body {
-  font-family: $font-family-base;
-
   @include font-settings();
+
+  font-family: $font-family-base;
 }

@@ -1,51 +1,48 @@
-/* Layout Mixins */
+// anchor-element()
+//
+// Anchor an element with absolute positioning. We usually use this to snap to
+// a position, or as a cheat to make an element stretch to full width/height.
+// Inputs: top, right, bottom, left, all (quick way to set all to the same value).
+// By setting the coordinates to null by default, nothing will be affected unless
+// you change any of the values to something else.
+// This way we don't have to declare all of them.
+//
+// ### Example Usage:
+//
+//   ```
+//   .element {
+//     @include anchor-element(0, 10px, 10px, 0);
+//   }
+//   .element2 {
+//     @include anchor-element($right: 10px, $bottom: 10px);
+//   }
+//   ```
+//
+// ### Parameters:
+//
+// * $top = top alignment
+// * $right = right alignment
+// * $bottom = bottom alignment
+// * $left = left alignment
+// * $position = optional position value, absolute by default
+//
+// ### Example Output:
+//   ```
+//   .element {
+//     position: absolute;
+//     top: 0;
+//     right: 10px;
+//     bottom: 10px;
+//     left: 0;
+//   }
+//   .element2 {
+//     position: absolute;
+//     right: 10px;
+//     bottom: 10px;
+//   }
+//   ```
+// Styleguide: Ice Box - Mixins - Layout - @anchor-element()
 
-/*
-anchor-element()
-
-Anchor an element with absolute positioning. We usually use this to snap to
-a position, or as a cheat to make an element stretch to full width/height.
-Inputs: top, right, bottom, left, all (quick way to set all to the same value).
-By setting the coordinates to null by default, nothing will be affected unless
-you change any of the values to something else.
-This way we don't have to declare all of them.
-
-### Example Usage:
-
-  ```
-  .element {
-    @include anchor-element(0, 10px, 10px, 0);
-  }
-  .element2 {
-    @include anchor-element($right: 10px, $bottom: 10px);
-  }
-  ```
-
-### Parameters:
-
-* $top = top alignment
-* $right = right alignment
-* $bottom = bottom alignment
-* $left = left alignment
-* $position = optional position value, absolute by default
-
-### Example Output:
-  ```
-  .element {
-    position: absolute;
-    top: 0;
-    right: 10px;
-    bottom: 10px;
-    left: 0;
-  }
-  .element2 {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-  }
-  ```
-Styleguide: Ice Box - Mixins - Layout - @anchor-element()
-*/
 @mixin anchor-element($top: null, $right: null, $bottom: null, $left: null, $position: null) {
   @if $position {
     position: unquote($position);
