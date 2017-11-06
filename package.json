@@ -55,6 +55,6 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
-    "before": "node-sass-import-once"
+    "before": "ember-cli-sass"
   }
 }
