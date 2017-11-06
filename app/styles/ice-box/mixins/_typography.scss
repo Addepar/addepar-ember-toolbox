@@ -1,38 +1,35 @@
-/* Typography Mixins */
+// @addepar-font-face()
+//
+// Creates Addepar specific font face declaration, based on Compass font-face mixin
+// Assumes all font types have the same base file name (Addepar standard)
+// For best results, declare type in this order: woff, otf/ttf, svg, eot
+//
+// ### Example Usage:
+//
+//   `@include addepar-font-face('Univers-Next',
+//     '/fonts/UniversNextW01Regular', ('woff', 'ttf'), $font-normal);`
+//
+// ### Parameters:
+//
+// * $name = Font name
+// * $font-file = File name
+// * $file-types = Array of different font file types
+// * $weight = 400 - Font weight
+// * $style = normal - Font style
+// * $post-fix = false - Add a custom string to the end of the font file, usually used for cross browser fixes
+//
+// ### Example Output:
+//   ```
+//   @font-face {
+//     font-family: "Univers-Next";
+//     src: url("/ice-box/fonts/UniversNextW01Regular.woff") format("woff"), url("/ice-box/fonts/UniversNextW01Regular.ttf") format("ttf");
+//     font-weight: 400;
+//     font-style: normal;
+//   }
+//   ```
+//
+// Styleguide: Ice Box - Mixins - Typography - @addepar-font-face()
 
-/*
-@addepar-font-face()
-
-Creates Addepar specific font face declaration, based on Compass font-face mixin
-Assumes all font types have the same base file name (Addepar standard)
-For best results, declare type in this order: woff, otf/ttf, svg, eot
-
-### Example Usage:
-
-  `@include addepar-font-face('Univers-Next',
-    '/fonts/UniversNextW01Regular', ('woff', 'ttf'), $font-normal);`
-
-### Parameters:
-
-* $name = Font name
-* $font-file = File name
-* $file-types = Array of different font file types
-* $weight = 400 - Font weight
-* $style = normal - Font style
-* $post-fix = false - Add a custom string to the end of the font file, usually used for cross browser fixes
-
-### Example Output:
-  ```
-  @font-face {
-    font-family: "Univers-Next";
-    src: url("/ice-box/fonts/UniversNextW01Regular.woff") format("woff"), url("/ice-box/fonts/UniversNextW01Regular.ttf") format("ttf");
-    font-weight: 400;
-    font-style: normal;
-  }
-  ```
-
-Styleguide: Ice Box - Mixins - Typography - @addepar-font-face()
-*/
 @mixin addepar-font-face($name, $font-file, $file-types, $weight: 400, $style: normal, $post-fix: false) {
   $font-files: null; // concatenated string of font declarations
   $format: null; // used when type format is not the same as its extension
@@ -63,37 +60,35 @@ Styleguide: Ice Box - Mixins - Typography - @addepar-font-face()
   }
 }
 
+// @font-settings()
+//
+// Addepar specific font rendering settings
+//
+// Example Usage:
+//
+//   ```
+//   body {
+//     @include @font-settings();
+//   }
+//   ```
+//
+// Parameters:
+//
+// * none
+//
+// Example Output:
+//   ```
+//   * {
+//     text-rendering: optimizeLegibility;
+//
+//     font-smoothing: antialiased;
+//     -webkit-font-smoothing: antialiased;
+//     -moz-osx-font-smoothing: grayscale;
+//   }
+//   ```
+//
+// Styleguide: Ice Box - Mixins - Typography - @font-settings()
 
-/*
-@font-settings()
-
-Addepar specific font rendering settings
-
-Example Usage:
-
-  ```
-  body {
-    @include @font-settings();
-  }
-  ```
-
-Parameters:
-
-* none
-
-Example Output:
-  ```
-  * {
-    text-rendering: optimizeLegibility;
-
-    font-smoothing: antialiased;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  ```
-
-Styleguide: Ice Box - Mixins - Typography - @font-settings()
-*/
 @mixin font-settings() {
   * {
     text-rendering: optimizeLegibility;
@@ -104,37 +99,36 @@ Styleguide: Ice Box - Mixins - Typography - @font-settings()
   }
 }
 
-/*
-@ellipsis-overflow()
+// @ellipsis-overflow()
+//
+// Standard setup to make text in an element ellipsize.
+// Element must have some kind of width applied.
+//
+// Example Usage:
+//
+//   ```
+//   .element {
+//     @include @ellipsis-overflow();
+//   }
+//   ```
+//
+// Parameters:
+//
+// * none
+//
+// Example Output:
+//   ```
+//   .element {
+//     display: block;
+//     overflow: hidden;
+//     white-space: nowrap;
+//     word-wrap: break-word;
+//     text-overflow: ellipsis;
+//   }
+//   ```
+//
+// Styleguide: Ice Box - Mixins - Typography - @ellipsis-overflow()
 
-Standard setup to make text in an element ellipsize.
-Element must have some kind of width applied.
-
-Example Usage:
-
-  ```
-  .element {
-    @include @ellipsis-overflow();
-  }
-  ```
-
-Parameters:
-
-* none
-
-Example Output:
-  ```
-  .element {
-    display: block;
-    overflow: hidden;
-    white-space: nowrap;
-    word-wrap: break-word;
-    text-overflow: ellipsis;
-  }
-  ```
-
-Styleguide: Ice Box - Mixins - Typography - @ellipsis-overflow()
-*/
 @mixin ellipsis-overflow() {
   display: block;
   overflow: hidden;

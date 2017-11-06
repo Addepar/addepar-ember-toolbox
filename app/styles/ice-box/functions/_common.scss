@@ -1,27 +1,25 @@
+// @non-zero-value()
+//
+// Tests if given variable has a non-zero value,
+// which depending on dev input could be an actual 0, 'none', or null.
+//
+// ### Example Usage:
+//
+//   ```
+//   non-zero-value($variable);
+//   ```
+//
+// ### Parameters:
+//
+// * $value = The variable to test
+//
+// ### Example Output:
+//   ```
+//   true or false
+//   ```
+//
+// Styleguide: Ice Box - Common - Functions - @non-zero-value()
 
-/*
-@non-zero-value()
-
-Tests if given variable has a non-zero value,
-which depending on dev input could be an actual 0, 'none', or null.
-
-### Example Usage:
-
-  ```
-  non-zero-value($variable);
-  ```
-
-### Parameters:
-
-* $value = The variable to test
-
-### Example Output:
-  ```
-  true or false
-  ```
-
-Styleguide: Ice Box - Common - Functions - @non-zero-value()
-*/
 @function non-zero-value($value) {
   @if ($value) and ($value != 0) and ($value != 'none') and ($value != null) {
     @return true;

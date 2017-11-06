@@ -1,20 +1,16 @@
-/* Typography Variables */
-
-/*
-Typography
-
-Note that this section is probably going be refactored and the documentation is not complete yet.
-
-$univers             - Univers font
-$univers-condensed   - Univers font condensed
-$univers-tabular     - Univers font tabular
-$tiempos             - Tiempos font
-$tiempos-headline    - Tiempos font headline
-$backup-fonts        - Browser friendly sans-serif backup fonts to be used along side any custom font declaration
-$font-[weight]       - font weights 100-900 respectively according to weight name (above is example)
-
-Styleguide Ice Box - Variables - Typography
-*/
+// Typography
+//
+// Note that this section is probably going be refactored and the documentation is not complete yet.
+//
+// $univers             - Univers font
+// $univers-condensed   - Univers font condensed
+// $univers-tabular     - Univers font tabular
+// $tiempos             - Tiempos font
+// $tiempos-headline    - Tiempos font headline
+// $backup-fonts        - Browser friendly sans-serif backup fonts to be used along side any custom font declaration
+// $font-[weight]       - font weights 100-900 respectively according to weight name (above is example)
+//
+// Styleguide Ice Box - Variables - Typography
 
 // Internal note: Refactor this!
 
@@ -42,15 +38,15 @@ $font-family-base:        $font-family-sans-serif !default;
 
 // Font Weights
 // -------------------------
-$font-thin:                         100;
-$font-extra-light:                  200;
-$font-light:                        300;
-$font-normal:                       400;
-$font-medium:                       500;
-$font-semi-bold:                    600;
-$font-bold:                         700;
-$font-extra-bold:                   800;
-$font-heavy:                        900;
+$font-thin:                         100 !default;
+$font-extra-light:                  200 !default;
+$font-light:                        300 !default;
+$font-normal:                       400 !default;
+$font-medium:                       500 !default;
+$font-semi-bold:                    600 !default;
+$font-bold:                         700 !default;
+$font-extra-bold:                   800 !default;
+$font-heavy:                        900 !default;
 
 
 // Font Size

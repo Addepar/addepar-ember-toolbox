@@ -1,58 +1,54 @@
-/* Element Mixins */
+// disabled-input()
+//
+// Global styling for disabled elements.
+// Any color modifications need to be done separately.
+//
+// ### Example Usage:
+//
+//   ```
+//   .element:disabled {
+//     @include disabled-input();
+//   }
+//   ```
+//
+// ### Example Output:
+//   ```
+//   .element:disabled {
+//     cursor: not-allowed;
+//     pointer-events: none;
+//     box-shadow: none;
+//   }
+//   ```
+// Styleguide: Ice Box - Mixins - Elements - @disabled-input()
 
-/*
-disabled-input()
-
-Global styling for disabled elements.
-Any color modifications need to be done separately.
-
-### Example Usage:
-
-  ```
-  .element:disabled {
-    @include disabled-input();
-  }
-  ```
-
-### Example Output:
-  ```
-  .element:disabled {
-    cursor: not-allowed;
-    pointer-events: none;
-    box-shadow: none;
-  }
-  ```
-Styleguide: Ice Box - Mixins - Elements - @disabled-input()
-*/
 @mixin disabled-input() {
   cursor: not-allowed;
   pointer-events: none;
   box-shadow: none;
 }
 
-/*
-reset-list()
+// reset-list()
+//
+// Clears default browser formatting for an unordered list.
+//
+// ### Example Usage:
+//
+//   ```
+//   ul {
+//     @include reset-list();
+//   }
+//   ```
+//
+// ### Example Output:
+//   ```
+//   ul {
+//     margin: 0;
+//     padding: 0;
+//     list-style: none;
+//   }
+//   ```
+// Styleguide: Ice Box - Mixins - Elements - @reset-list()
 
-Clears default browser formatting for an unordered list.
-
-### Example Usage:
-
-  ```
-  ul {
-    @include reset-list();
-  }
-  ```
-
-### Example Output:
-  ```
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  ```
-Styleguide: Ice Box - Mixins - Elements - @reset-list()
-*/
 @mixin reset-list() {
   margin: 0;
   padding: 0;
