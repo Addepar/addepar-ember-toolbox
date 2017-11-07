@@ -24,7 +24,7 @@
 // * $right = right alignment
 // * $bottom = bottom alignment
 // * $left = left alignment
-// * $position = optional position value, absolute by default
+// * $position = optional position value, absolute by default. Do not use quotes!
 //
 // ### Example Output:
 //   ```
@@ -45,7 +45,7 @@
 
 @mixin anchor-element($top: null, $right: null, $bottom: null, $left: null, $position: null) {
   @if $position {
-    position: unquote($position);
+    position: $position;
   } @else {
     position: absolute;
   }
