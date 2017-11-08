@@ -81,15 +81,55 @@ module.exports = {
       }
     },
     {
-      name: 'ember-default',
+      name: 'ember-release',
       bower: {
         dependencies: {
-          'ember-cli-shims': null
+          'ember': 'components/ember#release'
         },
         resolutions: {
-          'ember-cli-shims': null
+          'ember': 'release'
         }
       },
+      npm: {
+        devDependencies: {
+          'ember-source': null
+        }
+      }
+    },
+    {
+      name: 'ember-beta',
+      bower: {
+        dependencies: {
+          'ember': 'components/ember#beta'
+        },
+        resolutions: {
+          'ember': 'beta'
+        }
+      },
+      npm: {
+        devDependencies: {
+          'ember-source': null
+        }
+      }
+    },
+    {
+      name: 'ember-canary',
+      bower: {
+        dependencies: {
+          'ember': 'components/ember#canary'
+        },
+        resolutions: {
+          'ember': 'canary'
+        }
+      },
+      npm: {
+        devDependencies: {
+          'ember-source': null
+        }
+      }
+    },
+    {
+      name: 'ember-default',
       npm: {
         devDependencies: {}
       }
