@@ -56,5 +56,8 @@
   "ember-addon": {
     "configPath": "tests/dummy/config",
     "before": "ember-cli-sass"
+  },
+  "publishConfig": {
+    "@addepar:registry": "https://registry.npmjs.org/"
   }
 }
