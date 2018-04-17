@@ -2,9 +2,7 @@
   "name": "@addepar/ember-toolbox",
   "version": "0.2.0",
   "description": "Shared styles and helper for ICE components",
-  "keywords": [
-    "ember-addon"
-  ],
+  "keywords": ["ember-addon"],
   "license": "MIT",
   "author": "",
   "directories": {
@@ -15,18 +13,32 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember try:each"
+    "test": "ember try:each",
+    "lint:js": "ember adde-lint --javascript",
+    "lint": "ember adde-lint",
+    "lint:sass": "ember adde-lint --sass",
+    "lint:files": "ember adde-lint --file-names",
+    "precommit": "ember adde-pre-commit"
   },
   "dependencies": {
     "ember-assign-polyfill": "^2.2.0",
     "ember-cli-babel": "^6.6.0",
     "ember-cli-version-checker": "^2.1.0",
     "ember-getowner-polyfill": "^2.2.0",
-    "ember-hash-helper-polyfill": "^0.2.0"
+    "ember-hash-helper-polyfill": "^0.2.0",
+    "eslint": "^4.19.1",
+    "execa": "^0.10.0",
+    "fs-extra": "^5.0.0",
+    "lint-staged": "^7.0.4",
+    "prettier": "^1.12.0",
+    "sass-lint": "^1.12.1",
+    "walk-sync": "^0.3.2"
   },
   "devDependencies": {
-    "@addepar/eslint-config": "^2.1.0",
-    "@addepar/sass-lint-config": "^1.0.0",
+    "@addepar/eslint-config": "^4.0.0",
+    "@addepar/prettier-config": "^1.0.0",
+    "@addepar/sass-lint-config": "^2.0.1",
+    "@addepar/style-toolbox": "^0.4.0",
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^3.0.0",
     "ember-cli": "~2.16.2",
@@ -48,6 +60,7 @@
     "ember-native-dom-helpers": "^0.5.4",
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.16.0",
+    "husky": "^0.14.3",
     "loader.js": "^4.2.3"
   },
   "engines": {

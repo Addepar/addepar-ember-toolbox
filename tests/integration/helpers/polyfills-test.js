@@ -23,15 +23,24 @@ test('concat works', function(assert) {
 });
 
 test('hash works', function(assert) {
-  const context = this;
+  let context = this;
 
   assert.expect(2);
 
-  this.register('component:foo-bar', Component.extend({
-    hashObserver: on('init', observer('hash', function() {
-      assert.equal(this.get('hash.baz'), context.get('baz'), 'hash set successfully');
-    }))
-  }));
+  this.register(
+    'component:foo-bar',
+    Component.extend({
+      // eslint-disable-next-line
+      hashObserver: on(
+        'init',
+
+        // eslint-disable-next-line
+        observer('hash', function() {
+          assert.equal(this.get('hash.baz'), context.get('baz'), 'hash set successfully');
+        })
+      ),
+    })
+  );
 
   this.register('template:components/foo-bar', hbs`Hello, world!`);
 
