@@ -1,12 +1,31 @@
-# ice-box
+[![Build Status](https://travis-ci.org/Addepar/addepar-ember-toolbox.svg?branch=master)](https://travis-ci.org/Addepar/addepar-ember-toolbox)
 
-This README outlines the details of collaborating on this Ember addon.
+# @addepar/ember-toolbox
+
+This is the official Addepar Ember Toolbox! It provides a number of things for Addepar
+Ember projects, including:
+
+* Useful polyfills of Ember functionality for older versions of Ember
+  * The `(hash)` helper
+  * The `(concat)` helper
+  * `Ember.assign`
+* Ember commands to run Addepar's automated linting and formatting
+  * `ember adde-lint --javascript --sass --file-names`: Runs our linting checks against
+    the specified files. If no files are specified, runs them against the entire repo.
+  * `ember adde-format`: Formats the files specified, or if none are specified formats
+    the entire repo.
+  * `ember adde-pre-commit`: Runs our formatting and linting checks against staged
+    changes
+
+Installing this addon will also add our styleguides as dependencies, set up a pre-commit
+hook to format/lint changed files before commits using [Husky](https://github.com/typicode/husky/),
+and automatically format the repo its installed in.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ice-box`
-* `npm install`
+```
+ember install @addepar/ember-toolbox
+```
 
 ## Running
 

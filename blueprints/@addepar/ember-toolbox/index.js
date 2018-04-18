@@ -38,7 +38,7 @@ module.exports = {
     updateTravisYml(root);
 
     return this.addPackagesToProject([
-      { name: 'husky' },
+      { name: 'husky', target: '^0.14.3' },
       { name: '@addepar/eslint-config' },
       { name: '@addepar/prettier-config' },
       { name: '@addepar/sass-lint-config' },
