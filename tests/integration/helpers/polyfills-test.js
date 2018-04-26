@@ -48,3 +48,27 @@ test('hash works', function(assert) {
 
   this.set('baz', 123);
 });
+
+test('hasBlock works', function(assert) {
+  this.register('component:foo-bar', Component.extend());
+  this.register(
+    'template:components/foo-bar',
+    hbs`
+      {{#if hasBlock}}
+        {{yield}}
+      {{else}}
+        bar
+      {{/if}}
+    `
+  );
+
+  this.render(hbs`
+    {{#foo-bar class="foo"}}
+      foo
+    {{/foo-bar}}
+    {{foo-bar class="bar"}}
+  `);
+
+  assert.equal(find('.foo').textContent.trim(), 'foo');
+  assert.equal(find('.bar').textContent.trim(), 'bar');
+});
