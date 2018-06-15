@@ -7,6 +7,7 @@ module.exports = {
   name: '@addepar/ember-toolbox',
 
   included(app) {
+    this._super.included.apply(this, arguments);
     let emberChecker = new VersionChecker(app).forEmber();
 
     if (emberChecker.lt('1.13.0')) {
