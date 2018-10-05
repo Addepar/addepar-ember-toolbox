@@ -9,7 +9,7 @@
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "github:Addepar/addepar-ember-toolbox",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
