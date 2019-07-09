@@ -1,8 +1,10 @@
 {
   "name": "@addepar/ember-toolbox",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Shared styles and helper for ICE components",
-  "keywords": ["ember-addon"],
+  "keywords": [
+    "ember-addon"
+  ],
   "license": "MIT",
   "author": "",
   "directories": {
