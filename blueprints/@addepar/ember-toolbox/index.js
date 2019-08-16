@@ -1,12 +1,24 @@
 const fs = require('fs-extra');
 const { formatAll } = require('../../../lib/format');
 
-function updatePackageJson(root) {
+function updatePackageJson(root, ui) {
   let packageJson = fs.readJsonSync(`${root}/package.json`);
 
   packageJson.scripts = packageJson.scripts || {};
 
-  packageJson.scripts.precommit = 'ember adde-pre-commit';
+  packageJson.husky = packageJson.husky || {};
+  packageJson.husky.hooks = packageJson.husky.hooks || {};
+  if (packageJson.husky.hooks['pre-commit']) {
+    let existingHook = packageJson.husky.hooks['pre-commit'];
+    ui.writeWarnLine(
+      `Skipping addition of husky pre-commit hook because one is already present: "${existingHook}"`
+    );
+    ui.writeWarnLine(
+      'You should manually modify the husky pre-commit hook to run "ember adde-pre-commit"'
+    );
+  } else {
+    packageJson.husky.hooks['pre-commit'] = 'ember adde-pre-commit';
+  }
 
   packageJson.scripts.lint = 'ember adde-lint';
   packageJson.scripts['lint:js'] = 'ember adde-lint --javascript';
@@ -34,11 +46,11 @@ module.exports = {
   afterInstall() {
     let { ui, root } = this.project;
 
-    updatePackageJson(root);
+    updatePackageJson(root, ui);
     updateTravisYml(root);
 
     return this.addPackagesToProject([
-      { name: 'husky', target: '^0.14.3' },
+      { name: 'husky', target: '^3.0.3' },
       { name: '@addepar/eslint-config' },
       { name: '@addepar/prettier-config' },
       { name: '@addepar/sass-lint-config' },
