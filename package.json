@@ -23,10 +23,7 @@
     "precommit": "ember adde-pre-commit"
   },
   "dependencies": {
-    "ember-assign-polyfill": "^2.2.0",
     "ember-cli-babel": "^6.6.0",
-    "ember-getowner-polyfill": "^2.2.0",
-    "ember-hash-helper-polyfill": "^0.2.0",
     "eslint": "^4.19.1",
     "execa": "^0.10.0",
     "fs-extra": "^5.0.0",
