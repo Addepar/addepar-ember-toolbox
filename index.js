@@ -1,19 +1,8 @@
 /* eslint-env node */
 'use strict';
 
-const VersionChecker = require('ember-cli-version-checker');
-
 module.exports = {
   name: '@addepar/ember-toolbox',
-
-  included(app) {
-    this._super.included.apply(this, arguments);
-    let emberChecker = new VersionChecker(app).forEmber();
-
-    if (emberChecker.lt('1.13.0')) {
-      app.import('vendor/addepar-ember-toolbox/register-legacy-helpers.js');
-    }
-  },
 
   includedCommands() {
     let lint = require('./lib/lint');

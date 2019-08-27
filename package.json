@@ -25,7 +25,6 @@
   "dependencies": {
     "ember-assign-polyfill": "^2.2.0",
     "ember-cli-babel": "^6.6.0",
-    "ember-cli-version-checker": "^2.1.0",
     "ember-getowner-polyfill": "^2.2.0",
     "ember-hash-helper-polyfill": "^0.2.0",
     "eslint": "^4.19.1",
