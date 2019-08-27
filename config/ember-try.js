@@ -3,25 +3,6 @@ module.exports = {
   useYarn: true,
   scenarios: [
     {
-      name: 'ember-1.11',
-      bower: {
-        dependencies: {
-          ember: '~1.11.0',
-          'ember-cli-shims': 'ember-cli/ember-cli-shims#0.0.3',
-        },
-        resolutions: {
-          ember: '~1.11.0',
-          'ember-cli-shims': '0.0.3',
-        },
-      },
-      npm: {
-        devDependencies: {
-          'ember-cli-shims': null,
-          'ember-source': null,
-        },
-      },
-    },
-    {
       name: 'ember-1.13',
       bower: {
         dependencies: {
