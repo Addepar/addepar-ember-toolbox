@@ -4,8 +4,18 @@ const { formatAll } = require('../../../lib/format');
 function updatePackageJson(root, ui) {
   let packageJson = fs.readJsonSync(`${root}/package.json`);
 
-  packageJson.scripts = packageJson.scripts || {};
+  packageJson = updateHuskyInPackageJson(packageJson, ui);
 
+  packageJson.scripts = packageJson.scripts || {};
+  packageJson.scripts.lint = 'ember adde-lint';
+  packageJson.scripts['lint:js'] = 'ember adde-lint --javascript';
+  packageJson.scripts['lint:sass'] = 'ember adde-lint --sass';
+  packageJson.scripts['lint:files'] = 'ember adde-lint --file-names';
+
+  fs.writeJsonSync(`${root}/package.json`, packageJson);
+}
+
+function updateHuskyInPackageJson(packageJson, ui) {
   packageJson.husky = packageJson.husky || {};
   packageJson.husky.hooks = packageJson.husky.hooks || {};
   if (packageJson.husky.hooks['pre-commit']) {
@@ -20,12 +30,7 @@ function updatePackageJson(root, ui) {
     packageJson.husky.hooks['pre-commit'] = 'ember adde-pre-commit';
   }
 
-  packageJson.scripts.lint = 'ember adde-lint';
-  packageJson.scripts['lint:js'] = 'ember adde-lint --javascript';
-  packageJson.scripts['lint:sass'] = 'ember adde-lint --sass';
-  packageJson.scripts['lint:files'] = 'ember adde-lint --file-names';
-
-  fs.writeJsonSync(`${root}/package.json`, packageJson);
+  return packageJson;
 }
 
 function updateTravisYml(root) {
@@ -50,7 +55,7 @@ module.exports = {
     updateTravisYml(root);
 
     return this.addPackagesToProject([
-      { name: 'husky', target: '^3.0.3' },
+      { name: 'husky', target: '^4.2.1' },
       { name: '@addepar/eslint-config' },
       { name: '@addepar/prettier-config' },
       { name: '@addepar/sass-lint-config' },
