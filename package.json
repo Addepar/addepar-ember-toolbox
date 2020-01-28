@@ -19,7 +19,6 @@
     "lint:hbs": "ember-template-lint .",
     "lint:js": "ember adde-lint --javascript",
     "lint:sass": "ember adde-lint --sass",
-    "precommit": "ember adde-pre-commit",
     "start": "ember serve",
     "test": "ember test",
     "test:all": "ember try:each"
@@ -64,7 +63,7 @@
     "ember-try": "^1.0.0",
     "eslint-plugin-ember": "^6.2.0",
     "eslint-plugin-node": "^9.0.1",
-    "husky": "^0.14.3",
+    "husky": "^4.2.1",
     "loader.js": "^4.7.0",
     "qunit-dom": "^0.8.4"
   },
@@ -77,5 +76,10 @@
   },
   "publishConfig": {
     "@addepar:registry": "https://registry.npmjs.org/"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "ember adde-pre-commit"
+    }
   }
 }
