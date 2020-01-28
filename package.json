@@ -19,7 +19,6 @@
     "lint:hbs": "ember-template-lint .",
     "lint:js": "ember adde-lint --javascript",
     "lint:sass": "ember adde-lint --sass",
-    "precommit": "ember adde-pre-commit",
     "start": "ember serve",
     "test": "ember test",
     "test:all": "ember try:each"
@@ -77,5 +76,10 @@
   },
   "publishConfig": {
     "@addepar:registry": "https://registry.npmjs.org/"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "ember adde-pre-commit"
+    }
   }
 }
