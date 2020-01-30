@@ -67,6 +67,9 @@
     "loader.js": "^4.7.0",
     "qunit-dom": "^0.8.4"
   },
+  "peerDependencies": {
+    "eslint": ">= 5.0"
+  },
   "engines": {
     "node": ">= 10.*"
   },
