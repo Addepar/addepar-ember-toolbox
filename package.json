@@ -1,6 +1,6 @@
 {
   "name": "@addepar/ember-toolbox",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Shared styles and helper for ICE components",
   "keywords": [
     "ember-addon"
@@ -26,9 +26,9 @@
   "dependencies": {
     "ember-cli-babel": "^7.7.3",
     "eslint": "^4.19.1",
-    "execa": "^0.10.0",
+    "execa": "^5.0.0",
     "fs-extra": "^5.0.0",
-    "lint-staged": "^10.0.5",
+    "lint-staged": "^11.0.0",
     "prettier": "^1.19.1",
     "sass-lint": "^1.12.1",
     "walk-sync": "^0.3.2"
@@ -81,5 +81,9 @@
     "hooks": {
       "pre-commit": "ember adde-pre-commit"
     }
+  },
+  "bin": {
+    "adde-pre-commit": "./bin/adde-pre-commit.js",
+    "adde-lint-file-names": "./bin/adde-lint-file-names.js"
   }
 }
