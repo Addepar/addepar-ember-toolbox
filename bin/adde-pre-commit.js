@@ -10,7 +10,6 @@ const lintStaged = require('lint-staged');
     configPath: lintStagedConfigPath,
   });
   if (!success) {
-    /* eslint-disable-next-line */
-    throw new Error('Linting staged files failed');
+    process.exit(1);
   }
 })();

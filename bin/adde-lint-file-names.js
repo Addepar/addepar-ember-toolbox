@@ -7,6 +7,8 @@ const { lintFileNames } = require('../lib/lint-file-names');
   let absolutePaths = process.argv.slice(2);
   let result = await lintFileNames(absolutePaths);
   if (!result.success) {
-    throw new Error(`Linting File Names failed: ${result.message}`);
+    // eslint-disable-next-line
+    console.error(result.message);
+    process.exit(1);
   }
 })();

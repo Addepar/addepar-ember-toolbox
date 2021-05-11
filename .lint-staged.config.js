@@ -9,8 +9,8 @@ const sassLintPath = require.resolve('sass-lint/bin/sass-lint');
 const addeLintPath = path.resolve(__dirname, './bin/adde-lint-file-names.js');
 
 module.exports = {
-  '*.{js,json,md,scss}': [`${prettierPath} --write`],
-  '*.js': [`${eslintPath} --fix`],
+  '*.{js,json,md,scss}': `${prettierPath} --write`,
+  '*.js': `${eslintPath} --fix`,
   '*.scss': `${sassLintPath} -vq`,
   '*': addeLintPath,
 };
