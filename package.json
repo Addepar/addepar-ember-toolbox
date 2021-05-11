@@ -1,6 +1,6 @@
 {
   "name": "@addepar/ember-toolbox",
-  "version": "0.8.0-alpha.1",
+  "version": "0.8.0-alpha.2",
   "description": "Shared styles and helper for ICE components",
   "keywords": [
     "ember-addon"
