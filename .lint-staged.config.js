@@ -24,7 +24,7 @@ module.exports = {
   '*.js': `${eslintPath} --fix`,
 
   // Run sass-lint
-  '*.scss': `${sassLintPath} -c ${sassLintConfig} -v`,
+  '*.scss': `${sassLintPath} --config ${sassLintConfig} --verbose`,
 
   // Check the file-name for all changed files
   '*': addeLintFileNamesPath,
