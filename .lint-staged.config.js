@@ -14,7 +14,7 @@ const parentNodePath = path.resolve(path.join(path.basename(__filename), '../nod
 const eslintPath = require.resolve('eslint/bin/eslint', { paths: [parentNodePath] });
 const sassLintPath = require.resolve('sass-lint/bin/sass-lint');
 const sassLintConfig = require.resolve('@addepar/sass-lint-config/config.yml');
-const addeLintFileNamesPath = path.resolve(__dirname, './bin/adde-lint-file-names.js');
+// const addeLintFileNamesPath = path.resolve(__dirname, './bin/adde-lint-file-names.js');
 
 module.exports = {
   // Use prettier to reformat all these file types
@@ -27,5 +27,6 @@ module.exports = {
   '*.scss': `${sassLintPath} --config ${sassLintConfig} --verbose`,
 
   // Check the file-name for all changed files
-  '*': addeLintFileNamesPath,
+  // [WEBCORE-784] temporarily disable filename linting
+  // '*': addeLintFileNamesPath,
 };
