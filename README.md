@@ -1,5 +1,15 @@
 [![Build Status](https://travis-ci.org/Addepar/addepar-ember-toolbox.svg?branch=master)](https://travis-ci.org/Addepar/addepar-ember-toolbox)
 
+# Archived
+
+**This repository is no longer actively maintained.**
+
+To migrate away from it:
+  - replace "adde-pre-commit" with [lint-staged](https://github.com/lint-staged/lint-staged)
+  - replace "adde-lint --file-names" with [ls-lint](https://ls-lint.org/) (example PR: https://github.com/Addepar/ember-table/pull/1165)
+  - replace "adde-lint --javascript" with direct usage of eslint (example PR: https://github.com/Addepar/ember-table/pull/1163)
+  - replace "adde-lint --sass" with direct usage of sass-lint and prettier (example PR: https://github.com/Addepar/ember-table/pull/1164)
+
 # @addepar/ember-toolbox
 
 Addepar Ember Toolbox provides a number of commands for linting and ensuring
